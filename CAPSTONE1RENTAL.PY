@@ -88,27 +88,6 @@ def data_mobil():
         count = count+1
 
 
-# Menu 1.2 cari data dalam data mobil
-def cari_daftar():                                          
-    if rentalmob == {} :
-        nodata()
-    else :
-        pencarian = input("\n\n    Masukkan ID Yang Dicari: ")
-        while len(pencarian) != 4 :
-            print ('''\n\n    Masukkan 4 Angka ID (0-9)(Hanya Angka)\n\n''')
-            pencarian = input("\n\n    Masukkan ID Yang Dicari: ")
-
-        print('\n                  Daftar Mobil Janoi Car Rental \n     =============================================================')
-        print(f'     {"ID":<5}| {"Warna":<10}| {"Jenis mobil":<12}| {"Transmisi":<10}| {"Harga":<7}| {"Plat":<9}\n     =============================================================')
-        
-        if pencarian in rentalmob:
-                print(f"     {rentalmob[pencarian]['ID']:<5}| {rentalmob[pencarian]['Warna']:<10}| {rentalmob[pencarian]['Jenis mobil']:<12}| {rentalmob[pencarian]['Transmisi']:<10}| {rentalmob[pencarian]['Harga']:<7}| {rentalmob[pencarian]['Plat']:<9}")
-                
-        else:
-            print (f'''\n
-        === ID : "{pencarian}" Tidak Ditemukan ===
-            \n\n''')
-
 def menu1():
     while True:
         print('''
@@ -133,6 +112,31 @@ def menu1():
         else:
             tidak_tersedia()
             break
+            
+            
+       
+# Menu 1.2 cari data dalam data mobil
+def cari_daftar():                                          
+    if rentalmob == {} :
+        nodata()
+    else :
+        pencarian = input("\n\n    Masukkan ID Yang Dicari: ")
+        while len(pencarian) != 4 :
+            print ('''\n\n    Masukkan 4 Angka ID (0-9)(Hanya Angka)\n\n''')
+            pencarian = input("\n\n    Masukkan ID Yang Dicari: ")
+
+        print('\n                  Daftar Mobil Janoi Car Rental \n     =============================================================')
+        print(f'     {"ID":<5}| {"Warna":<10}| {"Jenis mobil":<12}| {"Transmisi":<10}| {"Harga":<7}| {"Plat":<9}\n     =============================================================')
+        
+        if pencarian in rentalmob:
+                print(f"     {rentalmob[pencarian]['ID']:<5}| {rentalmob[pencarian]['Warna']:<10}| {rentalmob[pencarian]['Jenis mobil']:<12}| {rentalmob[pencarian]['Transmisi']:<10}| {rentalmob[pencarian]['Harga']:<7}| {rentalmob[pencarian]['Plat']:<9}")
+                
+        else:
+            print (f'''\n
+        === ID : "{pencarian}" Tidak Ditemukan ===
+            \n\n''')
+
+
 
 
 
